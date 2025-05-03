@@ -71,5 +71,3 @@ def calcula_pontos_sequencia_alta(faces):
             faces[i] + 4 == faces[i+4]):
             return 30
     return 0
-
-print(calcula_pontos_sequencia_alta([3, 4, 3, 6, 5, 4, 5, 1, 5, 3, 6, 1, 4, 1]))
