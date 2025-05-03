@@ -64,10 +64,12 @@ def calcula_pontos_sequencia_baixa(faces):
 
 def calcula_pontos_sequencia_alta(faces):
     faces = sorted(set(faces))
-    for i in range(len(faces) - 3):
+    for i in range(len(faces) - 4):
         if (faces[i] + 1 == faces[i+1] and
             faces[i] + 2 == faces[i+2] and
             faces[i] + 3 == faces[i+3] and
             faces[i] + 4 == faces[i+4]):
             return 30
     return 0
+
+print(calcula_pontos_sequencia_alta([3, 4, 3, 6, 5, 4, 5, 1, 5, 3, 6, 1, 4, 1]))
