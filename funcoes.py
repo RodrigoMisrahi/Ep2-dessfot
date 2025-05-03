@@ -71,3 +71,18 @@ def calcula_pontos_sequencia_alta(faces):
             faces[i] + 4 == faces[i+4]):
             return 30
     return 0
+
+def calcula_pontos_full_house(faces):
+    dicio = {}
+    for i in faces:
+        if i in dicio:
+            dicio[i] += 1
+        else:
+            dicio[i] = 1
+    valores = dicio.values()
+    if sorted(valores) == [2, 3]:
+        soma = 0
+        for i in range(len(faces)):
+            soma += faces[i]
+        return soma
+    return 0
