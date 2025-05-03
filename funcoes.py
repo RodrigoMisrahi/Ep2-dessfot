@@ -129,3 +129,13 @@ def calcula_pontos_regra_avancada(faces):
         'sequencia_alta': sequencia_alta,
         'sequencia_baixa': sequencia_baixa
     }
+
+def faz_jogada(faces, cat, cartela):
+    simples = calcula_pontos_regra_simples(faces)
+    avancada = calcula_pontos_regra_avancada(faces)
+    if cat.isdigit():
+        catint = int(cat)
+        cartela["regra_simples"][catint] = simples[catint]
+    else:
+        cartela["regra_avancada"][cat] = avancada[cat]
+    return cartela
