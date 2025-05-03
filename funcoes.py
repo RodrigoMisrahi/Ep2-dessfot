@@ -52,3 +52,12 @@ def calcula_pontos_soma(faces):
     for i in faces:
         s += i
     return s
+
+def calcula_pontos_sequencia_baixa(faces):
+    faces = sorted(set(faces))
+    for i in range(len(faces) - 3):
+        if (faces[i] + 1 == faces[i+1] and
+            faces[i] + 2 == faces[i+2] and
+            faces[i] + 3 == faces[i+3]):
+            return 15
+    return 0
