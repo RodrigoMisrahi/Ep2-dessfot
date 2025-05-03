@@ -46,3 +46,9 @@ def calcula_pontos_regra_simples(faces):
     for i in faces:
         dicio[i] += i
     return dicio
+
+def calcula_pontos_soma(faces):
+    s = 0
+    for i in faces:
+        s += i
+    return s
